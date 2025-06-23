@@ -20,19 +20,19 @@ The project is designed strictly for ethical testing and educational purposes on
 
 ## Folder Structure:
 
-EncryptedKeylogger/
-├── .gitignore
-├── README.md
-├── keylogger/
-│ ├── keylogger.py # Captures keystrokes to log.txt
-│ ├── encryptor.py # Encrypts logs into log.enc
-│ ├── upload_client.py # Sends encrypted file to server
-│ ├── log.txt # (Generated) Plain keystroke log
-│ ├── log.enc # (Generated) Encrypted log
-│ └── key.key # (Generated) Fernet encryption key
-├── server/
-│ └── server.py # Flask server to receive logs
-└── uploads/ # (Generated) Folder for received logs
+project/
+- .gitignore
+- README.md
+- keylogger/
+  - keylogger.py # Captures keystrokes to log.txt
+  - encryptor.py # Encrypts logs into log.enc
+  - upload_client.py # Sends encrypted file to server
+  - log.txt # Generated Plain keystroke log
+  - log.enc # Generated Encrypted log
+  - key.key # Generated Fernet encryption key
+- server/
+  - server.py # Flask server to receive logs
+- uploads/ # (Generated) Folder for received logs
 
 ---
 
