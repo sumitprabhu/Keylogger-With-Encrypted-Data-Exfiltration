@@ -49,13 +49,12 @@ project/
 
 ### 1. Run the following commands
 
+```bash
 git clone https://github.com/sumitprabhu/Keylogger-With-Encrypted-Data-Exfiltration.git
-
 cd Keylogger-With-Encrypted-Data-Exfiltration
-
 pip install -r requirements.txt
-
 python keylogger/keylogger.py
+```
 
 ---
 ## How To Run This Project On Windows/Linux (Long and Detailed method):
@@ -63,13 +62,20 @@ python keylogger/keylogger.py
 ### 1. Install Python Dependancies
 
 - Make sure Python 3 is installed. Then run:
+
+```bash
   pip install pynput cryptography flask requests
+```
 
 ### 2. Run the Keylogger
 
 - Captures keystrokes and saves them in log.txt
 - Run with this command:
+
+```bash
   python keylogger/keylogger.py
+```
+
 - Press a few keys, then stop with "ESC" key
 - You can pause/resume the keylogging by pressing the "F9" key.
 
@@ -77,7 +83,10 @@ python keylogger/keylogger.py
 
 - Encrypt the logs with Fernet AES
 - Run with this command:
+```bash
   python keylogger/encryptor.py
+```
+
 - This will generate:
   - log.enc (encrypted data)
   - key.key (your secret key)
@@ -86,31 +95,35 @@ python keylogger/keylogger.py
 
 - Simulate a remote endpoint for exfiltration
 - Run using this command:
+
+```bash
   python server/server.py
+```
+
 - it runs on https://localhost:5000/upload
 
 ### 5. Send Encrypted Log to Server
 
 - Simulate exfiltration to the server
-- Run with this command
+- Run with this command:
+
+```bash
   python keylogger/upload_client.py
+```
+
 - Encrypted file will be stored in the uploads/ folder on the server.
 
 ### 6. Add these to .gitignore
 
+```bash
 __pycache__/
-
 *.pyc
-
 *.enc
-
 *.log
-
 log.txt
-
 key.key
-
 uploads/
+```
 
 ---
 
