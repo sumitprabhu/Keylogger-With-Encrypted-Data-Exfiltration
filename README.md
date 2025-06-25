@@ -45,8 +45,17 @@ project/
 5. Logs are saved securely in the `uploads/` folder on the server side.
 
 ---
+## How to Run This Project on Windows/Linux (Easy Method):
 
-## How To Run This Project On Windows/Linux:
+### 1. Run the following commands
+
+git clone https://github.com/sumitprabhu/Keylogger-With-Encrypted-Data-Exfiltration.git
+cd Keylogger-With-Encrypted-Data-Exfiltration
+pip install -r requirements.txt
+python keylogger/keylogger.py
+
+---
+## How To Run This Project On Windows/Linux (Long and Detailed method):
 
 ### 1. Install Python Dependancies
 
@@ -58,7 +67,8 @@ project/
 - Captures keystrokes and saves them in log.txt
 - Run with this command:
   python keylogger/keylogger.py
-- Press a few keys, then stop with "Ctrl + C"
+- Press a few keys, then stop with "ESC" key
+- You can pause/resume the keylogging by pressing the "F9" key.
 
 ### 3. Encrypt the Logs
 
