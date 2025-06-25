@@ -102,4 +102,4 @@ This project is intended strictly for educational and ethical testing purposes o
 ## Author
 
 Sumit Milind Prabhu
-Computer Engineering Student @ COEP Technological University, Pune
+- Computer Engineering Student @ COEP Technological University, Pune
