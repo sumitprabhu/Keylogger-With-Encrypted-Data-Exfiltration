@@ -50,8 +50,11 @@ project/
 ### 1. Run the following commands
 
 git clone https://github.com/sumitprabhu/Keylogger-With-Encrypted-Data-Exfiltration.git
+
 cd Keylogger-With-Encrypted-Data-Exfiltration
+
 pip install -r requirements.txt
+
 python keylogger/keylogger.py
 
 ---
