@@ -131,7 +131,7 @@ uploads/
 
 This project is intended strictly for educational and ethical testing purposes only. This project was created as an assignment for an internship at Elevate Labs. Do not deploy or distribute this software on any device or network you do not own or have explicit permission to test.
 
-## Author
+## Author and Maintainer
 
 Sumit Milind Prabhu
 
