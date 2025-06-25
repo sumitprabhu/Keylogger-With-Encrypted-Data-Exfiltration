@@ -86,11 +86,17 @@ project/
 ### 6. Add these to .gitignore
 
 __pycache__/
+
 *.pyc
+
 *.enc
+
 *.log
+
 log.txt
+
 key.key
+
 uploads/
 
 ---
