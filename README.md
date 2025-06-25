@@ -1,7 +1,7 @@
 # Keylogger-With-Encrypted-Data-Exfiltration-
 A Proof-of-Concept Keylogger that encrypts logs and simulates exfiltration
 
-##Project Overview:
+## Project Overview:
 
 This is a Proof-of-Concept (PoC) encrypted keylogger built using Python. It captures user keystrokes, encrypts them using AES (Fernet), and simulates the secure exfiltration of logs to a local Flask-based server.
 
@@ -102,3 +102,4 @@ This project is intended strictly for educational and ethical testing purposes o
 ## Author
 
 Sumit Milind Prabhu
+Computer Engineering Student @ COEP Technological University, Pune
