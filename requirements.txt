@@ -1,0 +1,4 @@
+pynput
+cryptography
+flask
+requests
