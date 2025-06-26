@@ -113,18 +113,6 @@ python keylogger/keylogger.py
 
 - Encrypted file will be stored in the uploads/ folder on the server.
 
-### 6. Add these to .gitignore
-
-```bash
-__pycache__/
-*.pyc
-*.enc
-*.log
-log.txt
-key.key
-uploads/
-```
-
 ---
 
 ## Disclaimer
